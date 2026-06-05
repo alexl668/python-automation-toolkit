@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Built 50+ Python Automation Scripts — Here's What I Learned</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.8; }
+        .container { max-width: 700px; margin: 0 auto; padding: 40px 20px; }
+        h1 { font-size: 2em; color: #fff; margin-bottom: 20px; }
+        h2 { color: #00d4ff; margin: 30px 0 15px; }
+        p { margin: 15px 0; color: #aaa; }
+        code { background: #1a1a2e; padding: 2px 8px; border-radius: 4px; color: #00d4ff; font-size: 0.9em; }
+        pre { background: #111; border: 1px solid #333; border-radius: 8px; padding: 20px; margin: 20px 0; overflow-x: auto; }
+        pre code { background: none; padding: 0; }
+        a { color: #7b2ff7; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .back { display: inline-block; margin-bottom: 30px; color: #666; }
+        .back:hover { color: #fff; }
+        ul { margin: 15px 0 15px 30px; }
+        li { margin: 8px 0; color: #aaa; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/python-automation-toolkit/" class="back">← Back to Toolkit</a>
+        <h1>I Built 50+ Python Automation Scripts — Here's What I Learned</h1>
+        <p><em>Published: June 5, 2026</em></p>
+
+        <p>Every developer has a collection of scripts they've written 10 times over. Web scrapers. CSV processors. Email senders. File organizers.</p>
+
+        <p>I finally sat down and packaged all mine into a proper toolkit. Here's what I learned.</p>
+
+        <h2>The Problem</h2>
+        <p>You need to scrape some product prices. You google "python web scraping tutorial." You find a Stack Overflow answer from 2019. You copy-paste it. It doesn't work. You spend 2 hours fixing it.</p>
+
+        <p>Sound familiar?</p>
+
+        <h2>The Solution</h2>
+        <p><strong>Python Automation Toolkit</strong> — 50+ production-ready scripts organized by category.</p>
+
+        <h3>🕷️ Web Scraping (5 scripts)</h3>
+        <p>The price monitor was the first script I wrote. It uses BeautifulSoup with multiple selector strategies (CSS, JSON-LD, Open Graph) to extract prices from any e-commerce site.</p>
+        <pre><code>python scripts/web_scraping/price_monitor.py --url "https://example.com/product"</code></pre>
+
+        <h3>📊 Data Processing (5 scripts)</h3>
+        <p>The CSV transformer is probably the most useful script. It can filter rows, rename columns, add computed columns, merge multiple CSVs, and pivot data — all from the command line.</p>
+        <pre><code>python scripts/data_processing/csv_transformer.py \
+  --input sales.csv \
+  --filter "region=US" \
+  --columns "product,revenue,date" \
+  --output us_sales.csv</code></pre>
+
+        <h3>💰 Finance & Crypto (3 scripts)</h3>
+        <p>The expense tracker uses SQLite for local storage and Rich for beautiful terminal tables. No cloud dependency.</p>
+        <pre><code>python scripts/finance_crypto/expense_tracker.py add --amount 25.50 --category food --note "Lunch"</code></pre>
+
+        <h2>Design Principles</h2>
+        <ul>
+            <li><strong>Standalone</strong> — Every script works independently. No framework lock-in.</li>
+            <li><strong>CLI-first</strong> — Every script has a proper Click CLI interface.</li>
+            <li><strong>Beautiful output</strong> — Rich terminal UI with tables, progress bars, and colors.</li>
+            <li><strong>Well-documented</strong> — Every script has docstrings and a README.</li>
+            <li><strong>MIT License</strong> — Use in personal and commercial projects.</li>
+        </ul>
+
+        <h2>What I Learned</h2>
+        <ul>
+            <li><strong>Real code > prompt templates.</strong> People want things that work, not ChatGPT wrappers.</li>
+            <li><strong>CLI design matters.</strong> A good <code>--help</code> message is worth more than a README.</li>
+            <li><strong>SQLite is underrated.</strong> For local-first tools, it's perfect. No server needed.</li>
+            <li><strong>Rich is amazing.</strong> The <code>rich</code> library makes terminal output look professional with minimal effort.</li>
+        </ul>
+
+        <h2>Try It Out</h2>
+        <pre><code>git clone https://github.com/alexl668/python-automation-toolkit
+cd python-automation-toolkit
+pip install -r requirements.txt
+
+# Try any script
+python scripts/web_scraping/seo_extractor.py --url "https://example.com"
+python scripts/file_system/duplicate_finder.py --path ~/Downloads
+python scripts/finance_crypto/crypto_alerter.py --coins bitcoin,ethereum</code></pre>
+
+        <p>What automation scripts do you find yourself rewriting constantly?</p>
+
+        <p><a href="https://github.com/alexl668/python-automation-toolkit">GitHub</a> · <a href="https://alexl668.github.io/python-automation-toolkit/">Buy ($29)</a></p>
+    </div>
+</body>
+</html>
